@@ -1,0 +1,122 @@
+/* BEGIN Regular */
+@font-face {
+  font-family: "Lato";
+  src: url("./fonts/Regular/Lato-Regular.eot?v=1.0.0");
+  src: url("./fonts/Regular/Lato-Regular.eot?#iefix&v=1.0.0") format("embedded-opentype"), url("./fonts/Regular/Lato-Regular.woff2?v=1.0.0") format("woff2"), url("./fonts/Regular/Lato-Regular.woff?v=1.0.0") format("woff"), url("./fonts/Regular/Lato-Regular.ttf?v=1.0.0") format("truetype"), url("./fonts/Regular/Lato-Regular.svg?v=1.0.0#LatoRegular") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+/* END Regular */
+
+body {
+  margin:0;font-family: "Lato";
+  color: #2e2f30;
+}
+p {
+    line-height: 1.4;
+}
+.pageContainer {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 100px 0;
+}
+.siteWidth {
+  width:100%;
+  max-width:1180px;
+  margin:0 auto;
+}
+.logoWrapper {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.formTitle {
+  margin-top:50px;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+}
+.flexing {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  flex: 0 0 33.333%;
+}
+.form-fields {
+  padding: 20px;
+  border:1px solid #c7c7c7;
+}
+.column-wrapper {
+    width: 80%;
+}
+.wrapper {
+  margin:20px 0;
+}
+.form-fields input:not([type="checkbox"]) {
+  width:100%;
+}
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+input,select {
+    border:1px solid #c7c7c7;
+    line-height: 1.75rem;
+    border-radius: 5px;
+}
+input[type="checkbox"] {
+  cursor: pointer;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+button#submit {
+    background: #1372bd;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 300ms;
+}
+button#submit[disabled] {
+  opacity: .5 !important
+}
+button#submit[enabled] {
+  opacity: 1;
+}
+button#submit:hover {
+  opacity: .8;
+}
+.buttonWrapper {
+  justify-content: flex-end;
+}
+input,button {
+  outline: none;
+}
+input.valid,
+input.valid:focus {
+  border-color: green !important;
+}
+input.invalid,
+input.invalid:focus {
+  border-color:red !important;
+}
+
+table {
+  text-align: left;
+  border-collapse: collapse;
+}
+tr {
+  border:1px solid #c7c7c7;
+}
+tr:nth-child(odd) {
+  background: #f7f7f7
+}
+tr:first-child {
+  background: #c7c7c7
+}
+td,th {
+  padding: 10px;
+}
