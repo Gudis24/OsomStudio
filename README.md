@@ -1,1 +1,1 @@
-OsomStudio
+OsomStudio zadanie
