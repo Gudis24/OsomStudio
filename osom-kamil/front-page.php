@@ -16,17 +16,20 @@ get_header(); ?>
 
 
           <?php echo osom_form(); // display form ?>
-          <?php
-          if ($save_into_file) { // if checkbox is checked display table using file data
-            ?> <h2><?php _e('TABLE FILE','osom-kamil') ?></h2> <?php
-            echo table_from_file();
-          }
-          ?>
-          <?php
-          if ($save_into_db) { // if checkbox is checked display table using db data
-            ?> <h2> <?php _e('TABLE DB','osom-kamil') ?></h2> <?php
-                echo table_from_db();
-          }; ?>
+
+          <?php if ($save_into_file) : // if checkbox is checked display table using file data ?>
+            <div class="tableWrapper">
+               <h2><?php _e('TABLE FILE','osom-kamil') ?></h2>
+               <?php echo table_from_file(); ?>
+             </div>
+          <?php endif; ?>
+
+          <?php if ($save_into_db) : // if checkbox is checked display table using db data ?>
+            <div class="tableWrapper">
+              <h2><?php _e('TABLE DB','osom-kamil') ?></h2>
+              <?php echo table_from_db(); ?>
+            </div>
+          <?php endif; ?>
       </div>
     </div>
   <?php endwhile; ?>

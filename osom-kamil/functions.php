@@ -33,15 +33,15 @@ function osom_form() {
         <div class="column-wrapper">
           <div class="wrapper">
             <label for="firstname"><?php _e('First name:','osom-kamil'); ?></label>
-            <input type="text" pattern="[^\s]{3,}" name="firstname" required value="">
+            <input id="firstname" type="text" pattern="[^\s]{3,}" name="firstname" required value="">
           </div>
           <div class="wrapper">
             <label for="lastname"> <?php _e('Last name:','osom-kamil'); ?></label>
-            <input type="text" pattern="[^\s]{3,}" name="lastname" required value="">
+            <input id="lastname" type="text" pattern="[^\s]{3,}" name="lastname" required value="">
           </div>
           <div class="wrapper">
-            <label for="login"> <?php _e('Login:','osom-kamil'); ?></label>
-            <input type="text" pattern="[^\s]{3,}" name="user_login" required value="">
+            <label for="user_login"> <?php _e('Login:','osom-kamil'); ?></label>
+            <input id="user_login" type="text" pattern="[^\s]{3,}" name="user_login" required value="">
           </div>
         </div>
       </div>
@@ -49,11 +49,11 @@ function osom_form() {
         <div class="column-wrapper">
           <div class="wrapper">
             <label for="e_mail"> <?php _e('User e-mail:','osom-kamil'); ?></label>
-            <input type="text" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required name="e_mail" value="">
+            <input id="e_mail" type="text" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required name="e_mail" value="">
           </div>
           <div class="wrapper">
             <label for="city"> <?php _e('City:','osom-kamil'); ?></label>
-            <select class="" name="city">
+            <select id="city" class="" name="city">
               <?php if(have_rows('cities')): ?>
                 <?php while( have_rows('cities') ): the_row(); ?>
                   <?php $city = get_sub_field('city'); ?>
@@ -75,7 +75,7 @@ function osom_form() {
           <div class="wrapper">
             <p><?php echo $policy_text; ?></p>
             <label for="policy_agree">
-              <input type="checkbox" name="policy_agree" value="" required>
+              <input id="policy_agree" type="checkbox" name="policy_agree" value="" required>
               <?php _e('Agree','osom-kamil') ?>
             </label>
           </div>
@@ -175,7 +175,7 @@ function table_from_file() {
   if ($osom_file === null) {
       echo 'File is empty';
   } else { ?>
-    <table width='100%'>
+    <table>
       <tbody>
         <tr>
           <th> <?php _e('Firstname','osom-kamil'); ?></th>
@@ -204,7 +204,7 @@ function table_from_db() {
   global $wpdb;
   $results = $wpdb->get_results( "SELECT * FROM data_form"); // Query to fetch data from database table and storing in $results
   if(!empty($results)) : ?>
-      <table width='100%'>
+      <table>
         <tbody>
           <tr>
             <th> <?php _e('ID','osom-kamil'); ?></th>
